@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Changing to previous working directory"
+cd "$OLDPWD"
