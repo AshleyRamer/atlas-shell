@@ -1,4 +1,2 @@
 #!/bin/bash
-CFILE="$CFILE"
-cpp $CFILE -o output_file.c
-
+CFILE="$CFILE.c"; cpp $CFILE -o output_file.c
