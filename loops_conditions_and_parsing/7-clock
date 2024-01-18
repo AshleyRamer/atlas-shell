@@ -2,7 +2,6 @@
 # This script displays the time for 12h 59m
 
 hours=0
-minutes=1
 
 while [ $hours -le 12 ]; do
     while [ $minutes -le 59 ]; do
@@ -14,4 +13,3 @@ while [ $hours -le 12 ]; do
 	done
     	((hours++))
 done | head -n 70
-
