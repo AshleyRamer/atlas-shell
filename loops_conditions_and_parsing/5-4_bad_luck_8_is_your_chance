@@ -11,5 +11,5 @@ while [ $c -le 10 ]; do
     else
         echo "Best School"
     fi
-    ((counter++))
+    ((c++))
 done
