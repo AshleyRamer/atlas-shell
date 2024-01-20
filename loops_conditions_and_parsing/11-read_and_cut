@@ -4,9 +4,9 @@
 passwd_file="/etc/passwd"
 
 while IFS=: read -r username x userid x home _; do
+    # Display username, user id, and home directory path
     echo "Username: $username"
     echo "User ID: $userid"
     echo "Home Directory: $home"
     echo "----------------------"
 done < "$passwd_file"
-
