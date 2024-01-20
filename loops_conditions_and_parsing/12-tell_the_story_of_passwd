@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Writing a story about 
+
+passwd_file="/etc/passwd"
+while IFS=: read -r username x userid groupid info home shell; do
+    # Extract additional information
+    command_shell="${shell##*/}"  # Extract the command/shell
+    passcode="********"  # Placeholder for passcode (fictional)
+
+    # Display the fictional story for each user
+    echo "The user $username is part of the $groupid gang,"
+    echo "lives in $home and rides $command_shell."
+    echo "USER ID's place is protected by the passcode $passcode,"
+    echo "more info about the user here: $info"
+    echo "----------------------"
+done < "$passwd_file"
+
