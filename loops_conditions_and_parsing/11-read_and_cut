@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
-# read file /etc/passwd and parse
+# Displays content of /etc/passwd file
 
-while read -r line
-do
-	echo "$line" | cut -d ":" -f 1,3,6
-done < "/etc/passwd"
+passwd_file="/etc/passwd"
+
+while IFS=: read -r username x userid x home _; do
+    echo "Username: $username"
+    echo "User ID: $userid"
+    echo "Home Directory: $home"
+    echo "----------------------"
+done < "$passwd_file"
+
